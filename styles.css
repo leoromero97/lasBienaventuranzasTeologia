@@ -121,6 +121,8 @@ html {
   border: 2px solid salmon;
   height: 48%;
   width: 60%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .text {
