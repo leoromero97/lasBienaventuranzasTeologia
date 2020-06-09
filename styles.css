@@ -1,0 +1,327 @@
+body {
+  background: #ddd19b;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Eagle Lake', cursive;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.containerMain {
+  height: 94%;
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  border: 5px solid blue;
+}
+
+.containerTitle {
+  text-align: center;
+  height: 20%;
+  width: 100%;
+  border: 2px solid green;
+}
+
+.containerTitle h1 {
+  font-size: 6vh;
+  text-shadow: 0 0 4px black;
+  animation: aparecer 2s ease-in-out;
+  -webkit-animation: aparecer 2s ease-in-out;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10vh);
+    transform: translateY(10vh);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+.containerSliderShow {
+  width: 100%;
+  height: 78%;
+  border: 4px solid violet;
+}
+
+.slide {
+  height: 100%;
+  display: none;
+  border: 3px solid orangered;
+}
+
+.fade {
+  animation: fade 1.8s;
+  -webkit-animation: fade 1.8s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.containerSlider {
+  background-image: url(./img/fondoslider.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 96%;
+  width: 98%;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.titleText {
+  color: black;
+  border: 2px solid red;
+  height: 14%;
+  width: 60%;
+}
+
+.titleText h2 {
+  font-size: 3.1vh;
+  text-align: center;
+}
+
+.containerText {
+  border: 2px solid salmon;
+  height: 48%;
+  width: 60%;
+}
+
+.text {
+  font-size: 2.4vh;
+  text-align: justify;
+}
+
+.containerImg {
+  border: 2px solid black;
+  height: 40%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  height: 100%;
+  animation: aparecer 6s ease-in-out;
+  -webkit-animation: aparecer 4s ease-in-out;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 0;
+  color: black;
+  font-size: 5vh;
+  transition: 0.6s ease;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  font-size: 6vh;
+}
+
+.dot {
+  cursor: pointer;
+  height: 0.4em;
+  width: 0.4em;
+  margin: 0 2px;
+  background-color: #f7fff7;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeDot,
+.dot:hover {
+  background-color: black;
+}
+
+.containerButton {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.containerParrafo {
+  display: flex;
+  justify-content: space-evenly;
+  border: 4px solid black;
+  visibility: hidden;
+}
+
+.parrafo,
+.parrafo2 {
+  border: 2px solid black;
+  width: 50%;
+  text-align: center;
+}
+
+.textParrafo {
+  font-size: 1.5vh;
+}
+
+
+/*
+@media screen and (min-width:600px) {
+  .banner {
+    height: 630px;
+  }
+
+  .containerH1 {
+    width: 98%;
+    height: 20%;
+  }
+
+  .containerH1 h1 {
+    font-size: 2rem;
+  }
+
+  .containerSliderShow {
+    height: 24rem;
+    margin-bottom: 2%;
+  }
+
+  .contentSlide,
+  .containerSlider2 {
+    height: 100%;
+  }
+
+  #Capa_1 {
+    height: 80%;
+  }
+
+  .text1 {
+    font-size: 1.2125em;
+  }
+
+  .prev,
+  .next {
+    top: 40%;
+  }
+
+  .titleText {
+    font-size: 1em;
+  }
+
+  .text2 {
+    font-size: 0.9em;
+  }
+
+@media screen and (min-width:900px) {
+  .banner {
+    min-height: 100vh;
+    margin-bottom: 10%;
+  }
+
+  .prev,
+  .next {
+    top: 60%;
+    font-size: 2.4em;
+  }
+
+  .containerH1 {
+    min-height: 22vh;
+  }
+
+  .containerH1 h1 {
+    padding-top: 2vh;
+    font-size: 6vh;
+  }
+
+  .containerSliderShow {
+    min-height: 60vh;
+    margin-bottom: 4%;
+    width: 100%;
+  }
+
+  .contentSlide,
+  .containerSlider2 {
+    width: 100%;
+  }
+
+  #Capa_1 {
+    height: 120%;
+  }
+
+  .text1 {
+    font-size: 1.8em;
+  }
+
+  .titleText {
+    font-size: 1.6em;
+    font-weight: bold;
+    width: 60%;
+  }
+
+  .text2 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 0.6em;
+    width: 0.6em;
+  }
+
+  .containerText {
+    padding-bottom: 4%;
+    width: 60%;
+    text-align: justify;
+  }
+
+  .containerBanner {
+    padding-bottom: 2%;
+  }
+}
+}
+*/
