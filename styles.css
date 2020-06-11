@@ -114,7 +114,7 @@ html {
 .titleText {
   color: black;
   height: 14%;
-  width: 60%;
+  width: 80%;
 }
 
 .titleText h2 {
@@ -132,7 +132,7 @@ html {
 }
 
 .text {
-  font-size: 2.4vh;
+  font-size: 2.2vh;
   text-align: justify;
   animation: aparecer 2s ease-in-out;
   -webkit-animation: aparecer 2s ease-in-out;
@@ -184,8 +184,8 @@ html {
 
 .dot {
   cursor: pointer;
-  height: 0.4em;
-  width: 0.4em;
+  height: 0.6em;
+  width: 0.6em;
   margin: 0 2px;
   background-color: #f7fff7;
   border-radius: 50%;
@@ -203,6 +203,7 @@ html {
   justify-content: space-evenly;
   width: 100%;
   height: 30%;
+  padding-top: 2%;
 }
 
 .button {
@@ -291,11 +292,13 @@ html {
 
   .containerText,
   .containerImg {
+    padding-top: 4%;
     width: 80%;
   }
 
   .titleText h2 {
-    font-size: 1.1vh;
+    padding-top: 2%;
+    font-size: 1.9vh;
   }
 
   .containerParrafo {
@@ -316,6 +319,14 @@ html {
 @media screen and (max-width:390px) {
   .containerTitle h1 {
     font-size: 2.2vh;
+  }
+
+  .containerSlider {
+    height: 80%;
+  }
+
+  .containerText {
+    padding-top: 30%;
   }
 
   .text,
